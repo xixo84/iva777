@@ -1,0 +1,47 @@
+{
+  "name": "gigathemes-envato-downloader",
+  "productName": "Gigathemes Envato Downloader",
+  "version": "1.0.0",
+  "description": "This application allows you to download courses from the envato.elements.com platform safely, anyone who would like the developer to download it: soporte@gigathemes.club",
+  "main": ".webpack/main",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "cross-env NODE_ENV=production electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\""
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^7.4.0",
+    "@electron-forge/maker-deb": "^7.4.0",
+    "@electron-forge/maker-zip": "^7.4.0",
+    "@electron-forge/maker-rpm": "^7.4.0",
+    "@electron-forge/maker-squirrel": "^7.4.0",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.4.0",
+    "@electron-forge/plugin-fuses": "^7.4.0",
+    "@electron-forge/plugin-webpack": "^7.4.0",
+    "@electron/fuses": "^1.8.0",
+    "@vercel/webpack-asset-relocator-loader": "^1.7.3",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.11.0",
+    "electron": "31.3.1",
+    "node-loader": "^2.0.0",
+    "style-loader": "^3.3.4",
+    "terser-webpack-plugin": "^5.3.10",
+    "webpack-obfuscator": "^3.5.1"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Gigathemes.club",
+    "email": "soporte@gigathemes.club"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "agentkeepalive": "^4.5.0",
+    "axios": "^1.7.3",
+    "crypto": "^1.0.1",
+    "electron-squirrel-startup": "^1.0.1",
+    "fs": "^0.0.1-security",
+    "httpntlm": "^1.8.13"
+  }
+}

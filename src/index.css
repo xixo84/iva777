@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #121212; /* Fondo oscuro */
+  font-family: 'Poppins', sans-serif;
+  color: #e0e0e0; /* Color del texto claro */
+}
+
+.container {
+  background-color: #1e1e1e; /* Contenedor oscuro */
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  max-width: 400px;
+  padding: 30px;
+  text-align: center;
+}
+
+.title {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #f53f9f; /* Color de acento */
+}
+
+.message {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #bdbdbd; /* Color del texto */
+}
+
+.highlight {
+  font-weight: 400;
+  color: #1e59e5; /* Enlace de color azul */
+  text-decoration: none;
+}
+
+.footer {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  color: #1e59e5; /* Verde suave */
+}
+
+.button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #42a5f5; /* Botón azul */
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #1e88e5; /* Color de botón en hover */
+}
