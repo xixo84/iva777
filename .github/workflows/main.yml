@@ -1,0 +1,40 @@
+name: gigathemes-envato-downloader
+
+on:
+  workflow_dispatch: # Permite ejecutar manualmente el workflow
+    inputs: # Opcional: define inputs si necesitas parámetros para el workflow
+      build_version:
+        description: 'Build version'
+        required: false
+        default: 'latest'
+
+jobs:
+  build-mac:
+    runs-on: macos-latest
+
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE20: true
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build Electron app for macOS
+        run: npx electron-forge make --arch x64
+
+      - name: List files in the output directory
+        run: ls -R out/make
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: Electron-macOS-App
+          path: out/make/zip/darwin/x64/*.zip
