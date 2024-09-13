@@ -92,14 +92,14 @@ function createWindow(app_updated) {
     webPreferences: {
       session: session.fromPartition('persist:main'), // Usando partición persistente
       preload: MAIN_WINDOW_PRELOAD_WEBPACK_ENTRY,
-      devTools: false, // Deshabilitar DevTools
+      //devTools: false, // Deshabilitar DevTools
     }
   });
   
   //Eliminar menu
-  win.setMenu(null);
+  //win.setMenu(null);
   //abrir el debugger
-  //win.webContents.openDevTools();
+  win.webContents.openDevTools();
 
   if(app_updated){
     win.loadURL(util.getHost()+'/access/login-externo/?service_platform=1');
